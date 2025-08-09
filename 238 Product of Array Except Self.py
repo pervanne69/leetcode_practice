@@ -1,6 +1,10 @@
 from typing import List
 
 def productExceptSelf(nums: List[int]) -> List[int]:
+    pass
+
+
+def sol1(nums: List[int]) -> List[int]:
     n = len(nums)
     products = [0 for i in range(n)]
     result = 1
@@ -21,7 +25,22 @@ def productExceptSelf(nums: List[int]) -> List[int]:
     return products
 
 
-print(productExceptSelf([1,2,3,4]))
+def sol2(nums: List[int]):
+    n = len(nums)
+    answer = [1] * n
+
+    left_product = 1
+    for i in range(n):
+        answer[i] = left_product
+        left_product *= nums[i]
+
+    right_product = 1
+    for i in range(n - 1, -1, -1):
+        answer[i] *= right_product
+        right_product *= nums[i]
+
+
+print(sol2([1,2,3,4]))
 print(productExceptSelf([-1,1,0,-3,3]))
 print(productExceptSelf([0, 0, 0, 0, 0]))
 print(productExceptSelf([-1, 1, -1, 1, -1]))
