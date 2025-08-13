@@ -23,4 +23,4 @@ def isValid(s: str) -> bool:
 
 
 print(isValid("()[]{}"))
-print(isValid(s = "(]"))
+print(isValid(s="(]"))
