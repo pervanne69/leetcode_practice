@@ -19,7 +19,7 @@
 def lengthOfLongestSubstringKDistinct(s: str, k: int) -> int:
     seen = dict()
     left = 0
-    maxi = float('-inf')
+    maxi = 0
     for right in range(len(s)):
         seen[s[right]] = seen.get(s[right], 0) + 1
         while left <= right and len(seen) > k:
