@@ -12,7 +12,6 @@ def isPalindrome(head: Optional[ListNode]):
     current = head
     while head:
         values.append(current.val)
-        head = current.next
         current = current.next
     left, right = 0, len(values) - 1
     if left == right:
