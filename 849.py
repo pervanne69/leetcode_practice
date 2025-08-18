@@ -1,3 +1,6 @@
+from typing import List
+
+
 class Solution:
     def maxDistToClosest(self, seats: List[int]) -> int:
         n = len(seats)
@@ -21,3 +24,6 @@ class Solution:
             if seats[i] == 0:
                 maxi = max(maxi, min(left_dist[i], right_dist[i]))
         return maxi
+
+
+print(Solution().maxDistToClosest(seats = [1,0,0,0,1,0,1]))
