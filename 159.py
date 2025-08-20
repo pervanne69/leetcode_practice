@@ -22,10 +22,9 @@ def lengthOfLongestSubstringTwoDistinct(s: str) -> int:
     for right in range(len(s)):
         seen[s[right]] = seen.get(s[right], 0) + 1
         while left <= right and len(seen) > 2:
-            if s[left] in seen:
-                seen[s[left]] -= 1
-                if seen[s[left]] == 0:
-                    del seen[s[left]]
+            seen[s[left]] -= 1
+            if seen[s[left]] == 0:
+                del seen[s[left]]
             left += 1
         maxi = max(maxi, right - left + 1)
     return maxi

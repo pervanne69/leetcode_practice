@@ -13,9 +13,9 @@ def lengthOfLongestSubstring(s: str) -> int:
     return max_length
 
 
-print(lengthOfLongestSubstring("dvdf"))
+
 print(lengthOfLongestSubstring("pwwkew"))
-print(lengthOfLongestSubstring("abcsdfsdnhjg"))
+
 
 
 def longest_substring_without_repeating_character(s: str) -> int:
